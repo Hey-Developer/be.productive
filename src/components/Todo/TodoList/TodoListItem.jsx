@@ -39,6 +39,21 @@ const TodoListItem = ({ todo }) => {
     dispatch(toggleTodo(id));
   };
 
+  function getDateFormatted(date) {
+    var otherDates = moment(date).fromNow();
+    var cb = function () {
+      return "[" + otherDates + "]";
+    };
+    return moment(date).calendar(null, {
+      sameDay: "[Today]",
+      nextDay: "[Tomorrow]",
+      nextWeek: cb,
+      lastDay: cb,
+      lastWeek: cb,
+      sameElse: "MMM DD, YYYY",
+    });
+  }
+
   return (
     <TodoListLi completed={todo.completed}>
       {todo.completed ? (
@@ -56,7 +71,7 @@ const TodoListItem = ({ todo }) => {
         </Description>
         <DateWrapper showDescription={showDescription}>
           <FontAwesomeIcon icon={["fas", "calendar-alt"]} className="text-lg" />
-          <p>{moment(todo.date).calendar()}</p>
+          <p>{getDateFormatted(todo.date)}</p>
         </DateWrapper>
       </div>
       <div className="flex items-center">

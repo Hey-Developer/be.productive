@@ -50,10 +50,14 @@ const Hero = ({ setTabValue }) => {
       </ContentSection>
       <HeroBg src={asideBg} alt="HeroBg" />
       <div className="flex m-10">
-        <IconWrapper href="#">
+        <IconWrapper
+          target="_blank"
+          href="https://github.com/Hey-Developer/be.productive">
           <FontAwesomeIcon icon={["fab", "github"]} />
         </IconWrapper>
-        <IconWrapper href="#">
+        <IconWrapper
+          target="_blank"
+          href="https://www.linkedin.com/in/divyansht/">
           <FontAwesomeIcon icon={["fab", "linkedin"]} />
         </IconWrapper>
       </div>

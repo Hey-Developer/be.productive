@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Wrapper } from "./excalidraw.styles.tw";
 import Excalidraw from "@excalidraw/excalidraw";
 import { getInitialData } from "./initialData";
@@ -53,7 +53,7 @@ const ExcalidrawWrapper = ({
     return () => {
       window.removeEventListener("hashchange", onHashChange);
     };
-  }, []);
+  }, [excalidrawRef]);
 
   return (
     <Wrapper>
