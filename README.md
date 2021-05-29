@@ -7,3 +7,4 @@ This project was built on ExceliDraw & React Context API
 - https://products.ls.graphics/paaatterns/ Paaatterns for beautiful pattern backgrounds.
 - Glassmorphism Effect in Background.
 - Moment.js to play with Date.
+- For Styling Purpose I Used `TailWind+Styled Components` combination for dynamic as well as easy styling.
